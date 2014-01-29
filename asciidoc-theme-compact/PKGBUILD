@@ -1,0 +1,26 @@
+# Maintainer: mizux <webmaster@mizux.net>
+# Contributor: mizux <webmaster@mizux.net>
+pkgname=asciidoc-theme-compact
+pkgver=8.6.6
+pkgrel=1
+pkgdesc="Asciidoc Compact Themes"
+arch=('any')
+url="http://www.methods.co.nz/asciidoc/"
+depends=()
+makedepends=('asciidoc')
+source=(http://powerman.name/doc/stylesheets/866/compact.css)
+md5sums=('5285750dcc757632f3d08eb334e6cc18')
+options=(!strip)
+license=('GPL')
+
+build() {
+  echo "asciidoc-theme-compact provides compact theme for asciidoc"
+}
+
+package() {
+  cd "$srcdir"
+  #install -D -m755 LICENSE.txt "$pkgdir/usr/share/doc/asciidoc/LICENSE"
+  find . -name "*.css" -exec install -Dm755 "{}" "$pkgdir/etc/asciidoc/themes/compact/{}" \;
+}
+
+# vim:set ts=2 sw=2 et:

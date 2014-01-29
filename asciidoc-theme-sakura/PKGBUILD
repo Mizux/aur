@@ -1,0 +1,25 @@
+# Maintainer: mizux <webmaster@mizux.net>
+# Contributor: mizux <webmaster@mizux.net>
+pkgname=asciidoc-theme-sakura
+pkgver=0.1
+pkgrel=1
+pkgdesc="Asciidoc Mizux Themes"
+arch=('any')
+url="http://www.methods.co.nz/asciidoc/"
+depends=('asciidoc')
+source=(http://www.mizux.net/aur/$pkgname-$pkgver.tar/gz)
+md5sums=('ToDo')
+options=(!strip)
+license=('GPL')
+
+build() {
+  echo "asciidoc-themes-mizux provides additional themes for asciidoc"
+}
+
+package() {
+  cd "$srcdir/$pkgname-$pkgver"
+  #install -D -m755 LICENSE.txt "$pkgdir/usr/share/doc/asciidoc/LICENSE"
+  find . -type f -exec install -Dm755 "{}" "$pkgdir/etc/asciidoc/{}" \;
+}
+
+# vim:set ts=2 sw=2 et:

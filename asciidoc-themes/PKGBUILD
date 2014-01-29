@@ -1,0 +1,20 @@
+# Maintainer: mizux <webmaster@mizux.net>
+# Contributor: mizux <webmaster@mizux.net>
+pkgname=asciidoc-themes
+pkgver=0.1
+pkgrel=1
+pkgdesc="Asciidoc Themes Meta Package"
+arch=('any')
+url="http://www.methods.co.nz/asciidoc/"
+depends=('asciidoc'
+'asciidoc-theme-ghost'
+'asciidoc-theme-sakura'
+'asciidoc-theme-tron')
+options=(!strip)
+license=('GPL')
+
+build() {
+  echo "asciidoc-themes is a meta-package which provides additional themes for asciidoc"
+}
+
+# vim:set ts=2 sw=2 et:
