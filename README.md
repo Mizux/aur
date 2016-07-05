@@ -23,15 +23,20 @@ cuda-toolkit
 
 Compile
 -------
-$ makepkg
-
+```sh
+makepkg
+```
 Verify PKBUILD and src.tar.gz
-$ namcap name
-
+```sh
+namcap name
+```
 Create tarball
 --------------
-$ makepkg --source
-
+```sh
+makepkg --source
+```
 Install
 -------
-$ makepkg --install
+```sh
+makepkg --install
+```
