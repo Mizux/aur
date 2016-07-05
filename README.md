@@ -6,10 +6,10 @@ My archlinux pkbuild
 Naming Convention
 -----------------
 
-module : module | module-TYPE | module-METATYPE
-TYPE: docs | theme-name | sdk | toolkit | VCS
-VCS : git | svn | hg | svn | darcs | bzr
-METATYPE: themes | themes-all
+module : module | module-TYPE | module-METATYPE  
+TYPE: docs | theme-NAME | sdk | toolkit | VCS  
+VCS : git | svn | hg | svn | darcs | bzr  
+METATYPE: themes | themes-all  
 
 Metatype are use to define pkbuild wich agregate several dependencies but don't
 produce anything.
